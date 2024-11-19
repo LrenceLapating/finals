@@ -1,0 +1,23 @@
+buildscript {
+    repositories {
+        google()  // Google's repository for Android SDK dependencies
+        mavenCentral()  // Maven Central for other dependencies
+        jcenter()  // Optional
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'  // Compatible Gradle plugin version
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30'  // Kotlin plugin version
+    }
+}
+
+allprojects {
+    repositories {
+        google()  // Google's repository
+        mavenCentral()  // Maven Central repository
+        jcenter()  // Optional
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir  // Cleaning task
+}
